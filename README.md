@@ -13,7 +13,6 @@
     <img src='https://img.shields.io/badge/Dataset-HuggingFace-yellow' alt='Dataset'></a>
 </p>
 
-
 ## Overview
 
 OneEmo targets video emotion intelligence, unifying emotion perception, emotion understanding, and emotion interaction within a single multimodal reasoning model. It covers sentiment analysis, basic emotion recognition, open-vocabulary emotion recognition, intention recognition, and humor understanding. Compared with models of similar scale, OneEmo achieves SOTA results on eight emotion tasks. The training pipeline consists of two core components:
@@ -23,17 +22,17 @@ OneEmo targets video emotion intelligence, unifying emotion perception, emotion 
 
 ## Resources
 
-| Resource     | URL                                                                                | Purpose                                      |
-| ------------ | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| OneEmo-Base  | [Hugging Face Model](https://huggingface.co/Jiaha0Hu4ng/OneEmo-Base)              | Curriculum learning stage 1 weights          |
-| OneEmo       | [Hugging Face Model](https://huggingface.co/Jiaha0Hu4ng/OneEmo)                   | Final Emo-Chord model weights                |
-| EmoWorld-130K | [Hugging Face Dataset](https://huggingface.co/datasets/Jiaha0Hu4ng/EmoWorld-130K) | Unified emotion reasoning dataset            |
-| Qwen3.5-Base | Please use the corresponding official base model repository                        | Initialization model for SFT and RL          |
-| all-mpnet-base-v2 | [Hugging Face Model](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) | S-BERT model                            |
-| Qwen2.5-7B-Instruct | [Hugging Face Model](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)        | RL thinking reward model                     |
-| DeepSeek-V4-flash | -                                                                                  | Automated judge for interaction tasks        |
-| MiMo-v2.5-Pro    | -                                                                                  | Automated judge for interaction tasks        |
-| GPT-4.1-mini     | -                                                                                  | Automated judge for interaction tasks        |
+| Resource            | URL                                                                                  | Purpose                               |
+| ------------------- | ------------------------------------------------------------------------------------ | ------------------------------------- |
+| OneEmo-Base         | [Hugging Face Model](https://huggingface.co/Jiaha0Hu4ng/OneEmo-Base)                 | Curriculum learning stage 1 weights   |
+| OneEmo              | [Hugging Face Model](https://huggingface.co/Jiaha0Hu4ng/OneEmo)                      | Final Emo-Chord model weights         |
+| EmoWorld-130K       | [Hugging Face Dataset](https://huggingface.co/datasets/Jiaha0Hu4ng/EmoWorld-130K)    | Unified emotion reasoning dataset     |
+| Qwen3.5-4B          | [Hugging Face Model](https://huggingface.co/Qwen/Qwen3.5-4B)                         | Initialization model for SFT and RL   |
+| all-mpnet-base-v2   | [Hugging Face Model](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) | S-BERT model                          |
+| Qwen2.5-7B-Instruct | [Hugging Face Model](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)                | RL thinking reward model              |
+| DeepSeek-V4-flash   | -                                                                                    | Automated judge for interaction tasks |
+| MiMo-v2.5-Pro       | -                                                                                    | Automated judge for interaction tasks |
+| GPT-4.1-mini        | -                                                                                    | Automated judge for interaction tasks |
 
 ## Directory Structure
 
@@ -61,18 +60,18 @@ OneEmo targets video emotion intelligence, unifying emotion perception, emotion 
 We used the following environment for training and evaluation; we recommend using the same configuration.
 For training, a Linux GPU environment compatible with the CUDA driver is recommended, preferably with the locked versions provided in this repository.
 
-| Component     | Version                |
-| ------------- | ---------------------- |
-| Python        | 3.12.0                 |
-| PyTorch       | 2.10.0+cu128           |
-| torchvision   | 0.25.0+cu128           |
-| CUDA Runtime  | 12.8 (PyTorch `cu128`) |
-| Transformers  | 5.2.0                  |
-| ms-swift      | 4.1.3                  |
-| vLLM          | 0.19.0                 |
-| DeepSpeed     | 0.19.0                 |
-| TRL           | 0.29.1                 |
-| flash-attn    | 2.8.3                  |
+| Component    | Version                |
+| ------------ | ---------------------- |
+| Python       | 3.12.0                 |
+| PyTorch      | 2.10.0+cu128           |
+| torchvision  | 0.25.0+cu128           |
+| CUDA Runtime | 12.8 (PyTorch `cu128`) |
+| Transformers | 5.2.0                  |
+| ms-swift     | 4.1.3                  |
+| vLLM         | 0.19.0                 |
+| DeepSpeed    | 0.19.0                 |
+| TRL          | 0.29.1                 |
+| flash-attn   | 2.8.3                  |
 
 ### Install with Conda
 
@@ -340,7 +339,6 @@ CUDA_VISIBLE_DEVICES=0 python inference_swift.py \
 
 `--datasets` accepts dataset groups defined in `config.py`, such as `merunibench`, `mir`, `msd`, `mhd`, `erg`, and `esc`, or you can pass a single dataset name directly.
 
-
 ## Notes
 
 - The training scripts default to a two-GPU SFT configuration and a single-GPU rollout/RL configuration; when GPU memory is insufficient, you need to adjust batch size, number of video frames, gradient accumulation, and the DeepSpeed configuration together.
@@ -359,3 +357,4 @@ CUDA_VISIBLE_DEVICES=0 python inference_swift.py \
   url       = {https://arxiv.org/pdf/2603.02123}
 }
 ```
+
