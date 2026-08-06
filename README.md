@@ -24,12 +24,12 @@ OneEmo targets video emotion intelligence, unifying emotion perception, emotion 
 
 | Resource            | URL                                                                                  | Purpose                               |
 | ------------------- | ------------------------------------------------------------------------------------ | ------------------------------------- |
-| OneEmo-Base         | [Hugging Face Model](https://huggingface.co/Jiaha0Hu4ng/OneEmo-Base)                 | Curriculum learning stage 1 weights   |
-| OneEmo              | [Hugging Face Model](https://huggingface.co/Jiaha0Hu4ng/OneEmo)                      | Final Emo-Chord model weights         |
-| EmoWorld-130K       | [Hugging Face Dataset](https://huggingface.co/datasets/Jiaha0Hu4ng/EmoWorld-130K)    | Unified emotion reasoning dataset     |
+| OneEmo-Base         | [Hugging Face Model](https://huggingface.co/Jiaha0Hu4ng/OneEmo-Base)                 | Curriculum learning stage 1 weight for cold start   |
+| OneEmo              | [Hugging Face Model](https://huggingface.co/Jiaha0Hu4ng/OneEmo)                      | Final Emo-Chord model weights for evaluation        |
+| EmoWorld-130K       | [Hugging Face Dataset](https://huggingface.co/datasets/Jiaha0Hu4ng/EmoWorld-130K)    | Unified emotion reasoning dataset for training   |
 | Qwen3.5-4B          | [Hugging Face Model](https://huggingface.co/Qwen/Qwen3.5-4B)                         | Initialization model for SFT and RL   |
 | all-mpnet-base-v2   | [Hugging Face Model](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) | S-BERT model                          |
-| Qwen2.5-7B-Instruct | [Hugging Face Model](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)                | RL thinking reward model              |
+| Qwen2.5-7B-Instruct | [Hugging Face Model](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)                | RL thought reward judge model weight            |
 | DeepSeek-V4-flash   | -                                                                                    | Automated judge for interaction tasks |
 | MiMo-v2.5-Pro       | -                                                                                    | Automated judge for interaction tasks |
 | GPT-4.1-mini        | -                                                                                    | Automated judge for interaction tasks |
