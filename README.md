@@ -173,7 +173,7 @@ Note: The `videos` field in `datas/sftnew/*.json` and `datas/rl/*.json` stores a
 
 ## Curriculum Learning SFT
 
-### Phase 1: Multi-task Cold Start
+### Stage 1: Multi-task Cold Start
 
 Phase 1 uses `scripts/train_sft_phase1.sh` and covers task families such as MSA, MER, MIR, MHD, MSD, and ERG. The default configuration uses LoRA, bfloat16, two GPUs, and DeepSpeed ZeRO-2:
 
@@ -190,7 +190,7 @@ ckpts/training_ckpts/sft_oneemo_p1/
 
 The `CUDA_VISIBLE_DEVICES=0,1`, `NPROC_PER_NODE=2`, base model path, and data sampling size in the script can be adjusted according to your GPU memory and machine configuration.
 
-### Export the Phase 1 Model
+### Export the Stage 1 Model
 
 Phase 1 produces a LoRA checkpoint. Before running the export, modify the three paths in `scripts/trans2Vllm_sft.sh`:
 
@@ -212,9 +212,9 @@ The exported directory must match the `--model` in the Phase 2 script. Currently
 ckpts/inference_ckpts/sft/oneemo_p1_e5_20260618
 ```
 
-### Phase 2: Curriculum Learning Extension
+### Stage 2: Curriculum Learning Extension
 
-Phase 2 continues training on the model exported from Phase 1, and adds more data and the ESC task:
+Phase 2 continues training on the model exported from Phase 1, and adds more ERG task data and the ESC task:
 
 ```bash
 bash scripts/train_sft_phase2.sh
@@ -275,7 +275,7 @@ vLLM rollout service + Emo-Chord
 
 `train_sft_then_chord.sh` is already configured with `--chord_sft_dataset`, `--chord_mu_warmup_steps`, `--chord_mu_decay_steps`, `--chord_mu_peak`, `--chord_mu_valley`, and `--chord_enable_phi_function true`, and loads `reward/reward_plugin.py`.
 
-### Run CHORD After Full Curriculum Learning
+### Run Emo-Chord After Full Curriculum Learning
 
 If you prefer to first complete Phase 1 and Phase 2, and then perform RL, you can use `scripts/train_grpo_chord.sh`:
 
