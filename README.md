@@ -359,11 +359,12 @@ CUDA_VISIBLE_DEVICES=0 python inference_swift.py \
 <!-- TODO: Add the BibTeX entry for the OneEmo paper here. -->
 
 ```bibtex
-@article{oneemo,
-  title     = {OneEmo: A Unified Multimodal Reasoning Model for Emotion Perception, Understanding, and Interaction},
-  author    = {TODO},
-  year      = {2026},
-  url       = {https://arxiv.org/pdf/2603.02123}
+@article{huang2026oneemo,
+      title={OneEmo: A Unified Multimodal Reasoning Model for Emotion Perception, Understanding, and Interaction}, 
+      author={Jiahao Huang and Zheng Lian and Jingyi Zhang and Zhide Chen and Xiaojiang Peng and Shaonan Wang},
+      year={2026},
+      journal={arXiv preprint arXiv:2608.06013},
 }
+
 ```
 
