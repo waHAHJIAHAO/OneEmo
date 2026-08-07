@@ -1,4 +1,4 @@
-<p align="center">
+<img width="590" height="755" alt="image" src="https://github.com/user-attachments/assets/be2337f2-0256-46de-b01f-afc6c5d949f1" /><p align="center">
   <img src="assets/logo.png" width="180" alt="OneEmo logo">
 </p>
 
@@ -355,8 +355,7 @@ CUDA_VISIBLE_DEVICES=0 python inference_swift.py \
 - The licenses of the original videos and each dataset are determined by their original publishers. Please follow the corresponding dataset licenses and terms of use before using the data.
 
 ## Citation
-
-<!-- TODO: Add the BibTeX entry for the OneEmo paper here. -->
+If you use this codebase, or otherwise found our work valuable, please cite:
 
 ```bibtex
 @article{huang2026oneemo,
@@ -365,6 +364,16 @@ CUDA_VISIBLE_DEVICES=0 python inference_swift.py \
       year={2026},
       journal={arXiv preprint arXiv:2608.06013},
 }
+
+@InProceedings{Huang_2026_CVPR,
+    author    = {Huang, Jiahao and Lin, Fengyan and Yang, Xuechao and Feng, Chen and Zhu, Kexin and Yang, Xu and Chen, Zhide},
+    title     = {Nano-EmoX: Unifying Multimodal Emotional Intelligence from Perception to Empathy},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {22986-22997}
+}
+```
 
 ```
 
