@@ -1,4 +1,4 @@
-<img width="590" height="755" alt="image" src="https://github.com/user-attachments/assets/be2337f2-0256-46de-b01f-afc6c5d949f1" /><p align="center">
+<p align="center">
   <img src="assets/logo.png" width="180" alt="OneEmo logo">
 </p>
 
