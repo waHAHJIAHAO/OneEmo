@@ -13,13 +13,6 @@
     <img src='https://img.shields.io/badge/Dataset-HuggingFace-yellow' alt='Dataset'></a>
 </p>
 
-## Overview
-
-OneEmo targets video emotion intelligence, unifying emotion perception, emotion understanding, and emotion interaction within a single multimodal reasoning model. It covers sentiment analysis, basic emotion recognition, open-vocabulary emotion recognition, intention recognition, and humor understanding. Compared with models of similar scale, OneEmo achieves SOTA results on eight emotion tasks. The training pipeline consists of two core components:
-
-1. **EmoWorld-130K**: Distills domain knowledge from expert models across multiple emotion tasks into a unified training dataset with explicit reasoning trajectories.
-2. **Emo-Chord**: Performs an off-policy cold start, then introduces expert trajectory data from the same task family as an auxiliary target during GRPO, and performs credit assignment through a unified multi-task reward system, ultimately unlocking the reasoning potential of compact models.
-
 ## 📅 Updates
 
 - **[ToDo]** 🚀 Released the **datasets** and evaluation **scripts**
@@ -28,6 +21,13 @@ OneEmo targets video emotion intelligence, unifying emotion perception, emotion 
 - **[Jul 2026]** 💻 Inference code are now live!
 
 ---
+
+## 💡About OneEmo
+
+OneEmo targets video emotion intelligence, unifying emotion perception, emotion understanding, and emotion interaction within a single multimodal reasoning model. It covers sentiment analysis, basic emotion recognition, open-vocabulary emotion recognition, intention recognition, and humor understanding. Compared with models of similar scale, OneEmo achieves SOTA results on eight emotion tasks. The training pipeline consists of two core components:
+
+1. **EmoWorld-130K**: Distills domain knowledge from expert models across multiple emotion tasks into a unified training dataset with explicit reasoning trajectories.
+2. **Emo-Chord**: Performs an off-policy cold start, then introduces expert trajectory data from the same task family as an auxiliary target during GRPO, and performs credit assignment through a unified multi-task reward system, ultimately unlocking the reasoning potential of compact models.
 
 ## Resources
 
