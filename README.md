@@ -5,7 +5,7 @@
 <h1 align="center">OneEmo: A Unified Multimodal Reasoning Model for Emotion Perception, Understanding, and Interaction</h1>
 
 <p align="center">
-    <a href="https://arxiv.org/pdf/2603.02123">
+    <a href="https://arxiv.org/pdf/2608.06013">
     <img src='https://img.shields.io/badge/Paper-Arxiv-orange' alt='Paper PDF'></a>
     <a href="https://huggingface.co/Jiaha0Hu4ng/OneEmo">
     <img src='https://img.shields.io/badge/Model-HuggingFace-yellow' alt='Model'></a>
@@ -19,6 +19,15 @@ OneEmo targets video emotion intelligence, unifying emotion perception, emotion 
 
 1. **EmoWorld-130K**: Distills domain knowledge from expert models across multiple emotion tasks into a unified training dataset with explicit reasoning trajectories.
 2. **Emo-Chord**: Performs an off-policy cold start, then introduces expert trajectory data from the same task family as an auxiliary target during GRPO, and performs credit assignment through a unified multi-task reward system, ultimately unlocking the reasoning potential of compact models.
+
+## 📅 Updates
+
+- **[ToDo]** 🚀 Released the **datasets** and evaluation **scripts**
+- **[Aug 2026]** 🎉 Released the **Paper**.
+- **[Jul 2026]** 🔥 Released **Post-Training weights** for OneEmo.
+- **[Jul 2026]** 💻 Inference code are now live!
+
+---
 
 ## Resources
 
