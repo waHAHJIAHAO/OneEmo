@@ -358,7 +358,7 @@ CUDA_VISIBLE_DEVICES=0 python inference_swift.py \
 - The licenses of the original videos and each dataset are determined by their original publishers. Please follow the corresponding dataset licenses and terms of use before using the data.
 
 ## Citation
-If you use this codebase, or otherwise found our work valuable, please cite:
+If you use this codebase, or otherwise found our work valuable, please consider giving a star :star: and cite the papers:
 
 ```bibtex
 @article{huang2026oneemo,
