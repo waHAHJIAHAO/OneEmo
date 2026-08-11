@@ -391,3 +391,10 @@ If you use this codebase, or otherwise found our work valuable, please consider 
 }
 ```
 
+## Acknowledgements
+
+The training and evaluation pipeline of OneEmo is built on top of several excellent open-source projects. We would like to specially thank:
+
+- [ms-swift](https://github.com/modelscope/ms-swift): for providing an efficient and easy-to-use training framework that powers the SFT, LoRA merge export, and multimodal inference in this project.
+- [AffectGPT](https://github.com/zeroQiaoba/AffectGPT): whose dataset and evaluation toolkit provided important references and foundations for building the emotion understanding benchmarks (`eval/my_affectgpt/`) in this project.
+

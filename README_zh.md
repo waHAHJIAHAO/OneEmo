@@ -5,7 +5,7 @@
 <h1 align="center">OneEmo: A Unified Multimodal Reasoning Model for Emotion Perception, Understanding, and Interaction</h1>
 
 <p align="center">
-    <a href="https://arxiv.org/pdf/2603.02123">
+    <a href="https://arxiv.org/pdf/2608.06013">
     <img src='https://img.shields.io/badge/Paper-Arxiv-orange' alt='Paper PDF'></a>
     <a href="https://huggingface.co/Jiaha0Hu4ng/OneEmo">
     <img src='https://img.shields.io/badge/Model-HuggingFace-yellow' alt='Model'></a>
@@ -358,4 +358,34 @@ CUDA_VISIBLE_DEVICES=0 python inference_swift.py \
 - 训练脚本默认面向两张 GPU 的 SFT 和单 GPU 的 rollout/RL 配置；显存不足时需要同时调整 batch size、视频帧数、梯度累积和 DeepSpeed 配置。
 - 多模态训练依赖 `IMAGE_MAX_TOKEN_NUM=1024`、`VIDEO_MAX_TOKEN_NUM=128` 和 `FPS_MAX_FRAMES=16` 等环境变量；这些值可按显存调整。
 - 原始视频及各数据集的许可证由其原始发布方决定。使用数据前请遵循对应数据集的许可和使用条款。
+
+## 引用
+
+如果你使用了本代码库，或认为我们的工作有价值，欢迎给一个 star :star: 并引用以下论文：
+
+```bibtex
+@article{huang2026oneemo,
+      title={OneEmo: A Unified Multimodal Reasoning Model for Emotion Perception, Understanding, and Interaction},
+      author={Jiahao Huang and Zheng Lian and Jingyi Zhang and Zhide Chen and Xiaojiang Peng and Shaonan Wang},
+      year={2026},
+      journal={arXiv preprint arXiv:2608.06013},
+}
+```
+```bibtex
+@InProceedings{Huang_2026_CVPR,
+    author    = {Huang, Jiahao and Lin, Fengyan and Yang, Xuechao and Feng, Chen and Zhu, Kexin and Yang, Xu and Chen, Zhide},
+    title     = {Nano-EmoX: Unifying Multimodal Emotional Intelligence from Perception to Empathy},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {22986-22997}
+}
+```
+
+## 致谢
+
+OneEmo 的训练与评测流程建立在多个优秀的开源工作之上。我们在此特别感谢：
+
+- [ms-swift](https://github.com/modelscope/ms-swift)：为本项目的 SFT、LoRA 合并导出与多模态推理提供了高效且易用的训练框架。
+- [AffectGPT](https://github.com/zeroQiaoba/AffectGPT)：其数据集与评测工具链为本项目的情感理解基准构建（`eval/my_affectgpt/`）提供了重要参考与基础。
 
