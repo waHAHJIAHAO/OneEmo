@@ -13,6 +13,10 @@
     <img src='https://img.shields.io/badge/Dataset-HuggingFace-yellow' alt='Dataset'></a>
 </p>
 
+<p align="center">
+  English | [Chinese](README_zh.md)
+</p>
+
 ## 📅 Updates
 
 - **[ToDo]** 🚀 Released the **datasets** and evaluation **scripts**
@@ -24,8 +28,6 @@
 
 ## 💡About OneEmo
 
-English | [Chinese](README_zh.md)
----
 OneEmo targets video emotion intelligence, unifying emotion perception, emotion understanding, and emotion interaction within a single multimodal reasoning model. It covers sentiment analysis (MSA), basic emotion recognition (B-MER), open-vocabulary emotion recognition(OV-MER), intention recognition (MIR), humor & sarcasm understanding (MHU & MSU), empathic response generation (ERG) and emotional support conversation (ESC). Compared with models of similar scale, OneEmo achieves SOTA results on eight emotion tasks. The training pipeline consists of two core components:
 
 1. **EmoWorld-130K**: Distills domain knowledge from expert models across multiple emotion tasks into a unified training dataset with explicit reasoning trajectories.
