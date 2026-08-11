@@ -1,15 +1,3 @@
-## =============================================================================
-## 本脚本由 AffectGPT/AffectGPT/evaluation-scoreonly.py 迁移而来。
-## 评估 4 类任务:
-##   - inference_data (merunibench: MER2023/MER2024/MELD/IEMOCAPFour/CMUMOSI/
-##                     CMUMOSEI/SIMS/SIMSv2/OVMERD)
-##   - intent        (MIntRec / MIntRec2)
-##   - urfunny       (URFunny)
-##   - mustard       (Mustard)
-##
-## 所有依赖 (toolkit / my_affectgpt / emotion_wheel) 均已迁移至 OneEmo/eval/ 下。
-## 不修改 OneEmo 根目录的 config.py，缺失的配置项在运行时动态补充。
-## =============================================================================
 import os
 import sys
 
@@ -31,7 +19,7 @@ if not hasattr(config, 'EMOTION_WHEEL_ROOT'):
 # 评估专用: openset 抽取所用的 LLM 模型路径
 if not hasattr(config, 'PATH_TO_LLM'):
     config.PATH_TO_LLM = {
-        'Qwen25_7B': '/public/home/lianzheng/hjh/AffectGPT/AffectGPT/models/Qwen2.5-7B-Instruct',
+        'Qwen25_7B': '/path/to/your/OneEmo/ckpts/Qwen2.5-7B-Instruct',
     }
 
 # 评估专用: 音频路径 (dataset 类初始化需要)
