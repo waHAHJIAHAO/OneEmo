@@ -367,7 +367,8 @@ If you use this codebase, or otherwise found our work valuable, please cite:
       year={2026},
       journal={arXiv preprint arXiv:2608.06013},
 }
-
+```
+```bibtex
 @InProceedings{Huang_2026_CVPR,
     author    = {Huang, Jiahao and Lin, Fengyan and Yang, Xuechao and Feng, Chen and Zhu, Kexin and Yang, Xu and Chen, Zhide},
     title     = {Nano-EmoX: Unifying Multimodal Emotional Intelligence from Perception to Empathy},
@@ -376,7 +377,5 @@ If you use this codebase, or otherwise found our work valuable, please cite:
     year      = {2026},
     pages     = {22986-22997}
 }
-```
-
 ```
 
