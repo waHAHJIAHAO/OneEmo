@@ -16,7 +16,7 @@
 
 ## 概览
 
-OneEmo 面向视频情感智能，将情绪感知、情绪理解和情绪交互统一到同一个多模态推理模型中，包括了Sentiment analysis，basic emotion recognition，Open-vocabulary emotion recognition，intention recognition，humor understanding，OneEmo与相似规模的模型对比，在八个情感任务上取得了SOTA结果。训练流程包含两个核心部分：
+OneEmo 面向视频情感智能，将情绪感知、情绪理解和情绪交互统一到同一个多模态推理模型中，包括了Sentiment analysis，basic emotion recognition，Open-vocabulary emotion recognition，intention recognition，humor & sarcasm understanding, empathic response generation and emotional support conversation八个情感计算核心任务. OneEmo与相似规模的模型对比，在这些情感任务上取得了SOTA结果。训练流程包含两个核心部分：
 
 1. **EmoWorld-130K**：从专家模型中将多个情感任务中的专业知识蒸馏为带有显式推理轨迹的统一训练数据集。
 2. **Emo-Chord**：先进行Off-Policy冷启动，随后在 GRPO 过程中引入同任务族的专家轨迹数据作为辅助目标，并通过统一的多任务奖励系统进行信用分配，最终解锁紧凑模型的推理潜能。
@@ -231,7 +231,7 @@ ckpts/training_ckpts/sft_oneemo_p2/
 该方法的训练时从 `--chord_sft_dataset` 读取一个循环 SFT 数据流，将 SFT loss 与 GRPO loss 动态地组合：
 
 ```text
-L_CHORD = (1 - mu) * L_GRPO + mu * L_SFT
+L_Emo-Chord = (1 - mu) * L_GRPO + mu * L_SFT
 ```
 
 其中 `mu` 先从 0 warm up 到 `chord_mu_peak`，再经过余弦衰减到 `chord_mu_valley`；`chord_enable_phi_function` 可以启用 token 级的 phi 权重。这样，Emo-Chord 先使用课程学习阶段一得到的模型进行冷启动，再在多任务 RL 中保留 SFT 目标的约束。
@@ -271,13 +271,13 @@ vLLM rollout 服务 + Emo-Chord
 
 `train_sft_then_chord.sh` 已经配置了 `--chord_sft_dataset`、`--chord_mu_warmup_steps`、`--chord_mu_decay_steps`、`--chord_mu_peak`、`--chord_mu_valley` 和 `--chord_enable_phi_function true`，并加载 `reward/reward_plugin.py`。
 
-### 完整课程学习后进行 CHORD
+### 完整课程学习后进行 Emo-Chord
 
 如果希望先完成 Phase 1 和 Phase 2，再进行 RL，可以使用 `scripts/train_grpo_chord.sh`：
 
 1. 完成 Phase 1 和 Phase 2，并导出 Phase 2 完整模型。
 2. 修改 `scripts/rollout_grpo.sh` 的 `--model` 为 Phase 2 完整模型，并保持 rollout 服务运行。
-3. 将 Phase 2 模型和输出目录写到 CHORD 脚本中：
+3. 将 Phase 2 模型和输出目录写到 chord 脚本中：
    ```bash
    bash ./scripts/train_grpo_chord.sh
    ```
