@@ -16,7 +16,7 @@
 
 ## 📅 Updates
 
-- **[ToDo]** 🚀 Released the **datasets** and evaluation **scripts**
+- **[Aug 2026]** 🚀 Released the **datasets** and evaluation **scripts**
 - **[Aug 2026]** 🎉 Released the **Paper**.
 - **[Jul 2026]** 🔥 Released **Post-Training weights** for OneEmo.
 - **[Jul 2026]** 💻 Inference code are now live!
@@ -61,6 +61,14 @@ OneEmo targets video emotion intelligence, unifying emotion perception, emotion 
 │   ├── reward_plugin.py            # format, process, answer rewards
 │   └── emotion_wheel/              # OVMER label mapping resources
 ├── scripts/                        # Scripts for SFT, GRPO, Emo-Chord, rollout, and LoRA weight merging
+├── eval/                           # Evaluation scripts
+│   ├── eval_perception_understanding.py  # Perception/understanding benchmark evaluation
+│   ├── eval_interaction.py         # ERG/ESC interaction quality evaluation (LLM judge)
+│   ├── prompt.py                   # ERG/ESC judge prompt templates
+│   ├── requirement.py              # Eval dependency list
+│   ├── emotion_wheel/              # OVMER label mapping resources (eval)
+│   ├── my_affectgpt/               # Evaluation toolkit (dataset/metric builders)
+│   └── toolkit/                    # Utilities (readers, qwen, vllm helpers)
 ├── environment.yml                 # Conda environment
 └── requirments.txt                 # Pip dependency list
 ```
@@ -350,6 +358,10 @@ CUDA_VISIBLE_DEVICES=0 python inference_swift.py \
 ```
 
 `--datasets` accepts dataset groups defined in `config.py`, such as `merunibench`, `mir`, `msd`, `mhd`, `erg`, and `esc`, or you can pass a single dataset name directly.
+
+### evaluation
+
+please see the /eval/README.md
 
 ## Notes
 

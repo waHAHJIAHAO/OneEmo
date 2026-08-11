@@ -1,0 +1,10 @@
+openai==2.36.0
+statsmodels==0.14.6
+krippendorff==0.8.2
+numpy==2.2.6
+scipy==1.17.1
+scikit-learn==1.8.0
+pandas==2.3.3
+tqdm==4.67.3
+vllm==0.19.0
+transformers==5.2.0

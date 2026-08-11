@@ -50,6 +50,14 @@ OneEmo 面向视频情感智能，将情绪感知、情绪理解和情绪交互�
 │   ├── reward_plugin.py            # format、process、answer 奖励
 │   └── emotion_wheel/              # OVMER 标签映射资源
 ├── scripts/                        # SFT、GRPO、Emo-Chord、rollout和合并LoRA权重脚本
+├── eval/                           # 评估脚本
+│   ├── eval_perception_understanding.py  # 感知/理解 benchmark 评估
+│   ├── eval_interaction.py         # ERG/ESC 交互质量评估（LLM 评委）
+│   ├── prompt.py                   # ERG/ESC 评委 prompt 模板
+│   ├── requirement.py              # 评估依赖清单
+│   ├── emotion_wheel/              # OVMER 标签映射资源（评估用）
+│   ├── my_affectgpt/               # 评估工具包（数据集/指标构建）
+│   └── toolkit/                    # 工具（文件读取、qwen、vllm 辅助）
 ├── environment.yml                 # Conda 环境
 └── requirments.txt                 # Pip 依赖清单
 ```

@@ -1,4 +1,4 @@
-# OneEmo Evaluation Scripts (English)
+# OneEmo Evaluation Scripts
 
 This directory contains two independent evaluation scripts for automated assessment of OneEmo-style models:
 
