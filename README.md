@@ -8,9 +8,9 @@
     <a href="https://arxiv.org/pdf/2608.06013">
     <img src='https://img.shields.io/badge/Paper-Arxiv-orange' alt='Paper PDF'></a>
     <a href="https://huggingface.co/Jiaha0Hu4ng/OneEmo">
-    <img src='https://img.shields.io/badge/Model-HuggingFace-yellow' alt='Model'></a>
+    <img src='https://img.shields.io/badge/Model-HuggingFace-yellow' alt='OneEmo'></a>
     <a href='https://huggingface.co/datasets/Jiaha0Hu4ng/EmoWorld-130K'">
-    <img src='https://img.shields.io/badge/Dataset-HuggingFace-yellow' alt='Dataset'></a>
+    <img src='https://img.shields.io/badge/Dataset-HuggingFace-yellow' alt='EmoWorld-130K'></a>
 </p>
 
 
