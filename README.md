@@ -17,7 +17,7 @@
 
 ## 📅 Updates
 
-- **[Aug 2026]** 🥰 Online demo is available.[Space](https://huggingface.co/spaces/Jiaha0Hu4ng/OneEmo)
+- **[Aug 2026]** 🥰 Online demo is available. [HF Space](https://huggingface.co/spaces/Jiaha0Hu4ng/OneEmo)
 - **[Aug 2026]** 🚀 Released the **datasets** and evaluation **scripts**
 - **[Aug 2026]** 🎉 Released the **Paper**.
 - **[Jul 2026]** 🔥 Released **Post-Training weights** for OneEmo.
