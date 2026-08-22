@@ -13,6 +13,7 @@
     <img src='https://img.shields.io/badge/Dataset-HuggingFace-yellow' alt='EmoWorld-130K'></a>
 </p>
 
+⭐ If our project helps you, please give us a star on GitHub to support us!
 
 ## 📅 Updates
 
